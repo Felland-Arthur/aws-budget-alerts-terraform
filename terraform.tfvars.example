@@ -1,0 +1,21 @@
+# Example configuration file for AWS Budget Alerts
+# Copy to terraform.tfvars and update with your values
+
+budget_name   = "monthly-budget-alert"
+budget_limit  = 325  # $325 monthly budget
+
+alert_emails = [
+  "arthurfelland@gmail.com",  # Replace with your email
+  # "team-alert@company.com"  # Add additional emails if needed
+]
+
+sns_topic_name = "production-budget-alerts"
+
+enable_cross_account = false
+
+tags = {
+  Environment = "production"
+  Team        = "devops"
+  Project     = "cost-management"
+  Owner       = "Felland-Arthur"
+}
